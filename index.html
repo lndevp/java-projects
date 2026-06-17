@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java Projects | Terrence Yang</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --page: #101114;
+      --panel: #181b20;
+      --panel-2: #20242b;
+      --text: #f8fafc;
+      --muted: #9aa4b2;
+      --line: rgba(255, 255, 255, 0.1);
+      --accent: #4fb3ff;
+      --accent-2: #41d3a2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        linear-gradient(135deg, rgba(79, 179, 255, 0.14), transparent 32%),
+        linear-gradient(315deg, rgba(65, 211, 162, 0.12), transparent 36%),
+        var(--page);
+      color: var(--text);
+    }
+
+    main {
+      width: min(1040px, 100%);
+      margin: 0 auto;
+      padding: 42px 20px;
+    }
+
+    header {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(36px, 8vw, 76px);
+      line-height: 0.96;
+      letter-spacing: 0;
+    }
+
+    p {
+      max-width: 680px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .project {
+      min-height: 230px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 22px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(24, 27, 32, 0.92);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      border-color: rgba(79, 179, 255, 0.46);
+      background: var(--panel);
+    }
+
+    .project h2 {
+      margin: 0 0 8px;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    .project span {
+      width: fit-content;
+      padding: 8px 10px;
+      border-radius: 8px;
+      color: #061014;
+      background: var(--accent-2);
+      font-weight: 800;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 9px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      background: var(--panel-2);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Java Projects</h1>
+      <p>A small portfolio of polished programming projects, interactive tools, and coursework-style builds by Terrence Yang.</p>
+    </header>
+
+    <section class="projects" aria-label="Project list">
+      <a class="project" href="calculator/">
+        <div>
+          <h2>Precision Calculator</h2>
+          <p>A responsive calculator with scientific functions, memory, history, smart fractions, decimal toggling, and keyboard support.</p>
+        </div>
+        <div class="tags">
+          <div class="tag">HTML</div>
+          <div class="tag">CSS</div>
+          <div class="tag">JavaScript</div>
+        </div>
+        <span>Open</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
